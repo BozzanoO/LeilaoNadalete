@@ -1,78 +1,39 @@
 # Seja bem-vindo ao Projeto Leilão!
-Para executar a aplicação, basta clonar em sua máquina local.
+Este projeto implementa uma API para gerenciamento de leilões, dispositivos, veículos, clientes e instituições financeiras. Utiliza o framework Micronaut para criação de APIs.
 
-Para rodar execute os comandos no terminal:
+## Estrutura do Projeto
 
-- mvn clean
-- mvn install
-- mvn test
-- mvn mn:run
-Em seguida ele irá rodar na porta a seguir:
+### Camadas Principais
 
-- http://localhost/8080/swagger-ui#/
-O Swagger irá demonstrar todas as rotas para teste e documentação da aplicação.
-
-Muito obrigado Professor Nadalete pelo projeto e conhecimentos prporcionados a esta aplicação.
-
-## Micronaut 4.7.1 Documentation
-
-- [User Guide](https://docs.micronaut.io/4.7.1/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.7.1/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.7.1/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
-
-- [Micronaut Maven Plugin documentation](https://micronaut-projects.github.io/micronaut-maven-plugin/latest/)
-## Feature hibernate-jpamodelgen documentation
-
-- [Micronaut Hibernate JPA Static Metamodel Generator documentation](https://micronaut-projects.github.io/micronaut-data/latest/guide/#typeSafeJava)
-
-- [https://hibernate.org/orm/tooling/](https://hibernate.org/orm/tooling/)
+> [!NOTE]
+> __Controller:__<br>
+>Expõe os endpoints para interação com os usuários ou sistemas externos. É responsável por receber as requisições, processar os dados básicos e chamar as camadas de serviço.
 
 
-## Feature swagger-ui documentation
-
-- [Micronaut Swagger UI documentation](https://micronaut-projects.github.io/micronaut-openapi/latest/guide/index.html)
-
-- [https://swagger.io/tools/swagger-ui/](https://swagger.io/tools/swagger-ui/)
+> [!NOTE]
+> __Service:__<br>
+Implementa as regras de negócio e lógica da aplicação. Trata os dados recebidos dos controllers e delega operações de persistência para a camada de repositório.
 
 
-## Feature maven-enforcer-plugin documentation
+> [!NOTE]
+> __Repository:__<br>
+Realiza as operações de persistência no banco de dados. Fornece uma interface para interagir com os dados de maneira eficiente e segura.
 
-- [https://maven.apache.org/enforcer/maven-enforcer-plugin/](https://maven.apache.org/enforcer/maven-enforcer-plugin/)
+> [!NOTE]
+> __Enums:__<br>
+>Define valores constantes e categóricos usados no sistema, como estados, tipos e categorias, promovendo consistência.
 
+## Configuração do Ambiente Local
+```
+1. Clonar o Repositório<br>
+https://github.com/BozzanoO/LeilaoNadalete.git
 
-## Feature jdbc-hikari documentation
+2. Executar o Projeto<br>
+  Em um terminal execute mvn clean e em seguida mvn mn:run
 
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
+A API estará disponível em: http://localhost:8080
 
-
-## Feature openapi documentation
-
-- [Micronaut OpenAPI Support documentation](https://micronaut-projects.github.io/micronaut-openapi/latest/guide/index.html)
-
-- [https://www.openapis.org](https://www.openapis.org)
-
-
-## Feature micronaut-aot documentation
-
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
-
-
-## Feature lombok documentation
-
-- [Micronaut Project Lombok documentation](https://docs.micronaut.io/latest/guide/index.html#lombok)
-
-- [https://projectlombok.org/features/all](https://projectlombok.org/features/all)
-
-
-## Feature hibernate-jpa documentation
-
-- [Micronaut Hibernate JPA documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#hibernate)
-
-
-## Feature serialization-jackson documentation
-
-- [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
-
-
+Para teste, e como recomendação para criação do projeto,
+utilize o Swagger em: http://localhost:8080/swagger-ui#/
+```
+Agradecimentos ao professor Nadadelete, que nos instruiu para a criação do projeto.
