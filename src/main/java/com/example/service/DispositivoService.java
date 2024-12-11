@@ -1,21 +1,19 @@
 package com.example.service;
 
+import jakarta.inject.Singleton;
+import jakarta.transaction.Transactional;
+import lombok.AllArgsConstructor;
+
 import java.util.List;
 import java.util.Optional;
 
 import com.example.entity.Dispositivo;
 import com.example.repository.DispositivoRepository;
 
-import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
+@Singleton
 @AllArgsConstructor
 public class DispositivoService {
-    
+
     private final DispositivoRepository dispositivoRepository;
 
     @Transactional
@@ -34,9 +32,10 @@ public class DispositivoService {
     @Transactional
     public Dispositivo atualizar(Long id, Dispositivo dispositivoAtualizado) {
         Dispositivo dispositivo = dispositivoRepository.findById(id)
-            .orElseThrow(() -> new IllegalArgumentException("Veículo não encontrado."));
-        dispositivo.setEspecificacoesTecnicas(dispositivoAtualizado.getEspecificacoesTecnicas());
-        dispositivo.setTipo(dispositivoAtualizado.getTipo());
+            .orElseThrow(() -> new IllegalArgumentException("Dispositivo não encontrado."));
+        dispositivo.setMarca(dispositivoAtualizado.getMarca());
+        dispositivo.setModelo(dispositivoAtualizado.getModelo());
+        dispositivo.setCor(dispositivoAtualizado.getCor());
         dispositivo.setValorInicial(dispositivoAtualizado.getValorInicial());
         dispositivo.setLeilao(dispositivoAtualizado.getLeilao());
         return dispositivoRepository.save(dispositivo);

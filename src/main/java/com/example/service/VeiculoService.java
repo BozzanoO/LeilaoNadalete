@@ -1,14 +1,14 @@
 package com.example.service;
 
-import com.example.entity.Veiculo;
-import com.example.repository.VeiculoRepository;
-
 import jakarta.inject.Singleton;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
 import java.util.List;
 import java.util.Optional;
+
+import com.example.entity.Veiculo;
+import com.example.repository.VeiculoRepository;
 
 @Singleton
 @AllArgsConstructor
@@ -45,4 +45,3 @@ public class VeiculoService {
         veiculoRepository.deleteById(id);
     }
 }
-

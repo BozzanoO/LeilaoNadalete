@@ -9,6 +9,5 @@ import io.micronaut.data.jpa.repository.JpaRepository;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
-   List<Produto> findByLeilaoId(Long leilaoId);
+    List<Produto> findByLeilaoId(Long leilaoId);
 }
-

@@ -1,4 +1,6 @@
-package com.example.entity;
+package com.example.entity.Dispositivos;
+
+import com.example.entity.Dispositivo;
 
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.Entity;
@@ -13,11 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Serdeable
-public class Veiculo extends Produto {
-    private String placa;
-    private String modelo;
-    private String marca;
-    private String cor;
-    private Long distanciaPercorridaEmKm;
-    private int ano;
+public class Hub extends Dispositivo {
+    private int numeroDePortas;
+    private int tamanhoDoDispositivo;
 }

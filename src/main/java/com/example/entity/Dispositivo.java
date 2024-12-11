@@ -14,6 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Serdeable
 public class Dispositivo extends Produto {
-    private String especificacoesTecnicas;
-    private String tipo;
+    private String marca;
+    private String modelo;
+    private String cor;
 }
