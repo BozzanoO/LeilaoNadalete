@@ -29,11 +29,12 @@ Realiza as operações de persistência no banco de dados. Fornece uma interface
 https://github.com/BozzanoO/LeilaoNadalete.git
 
 2. Executar o Projeto<br>
-  Em um terminal execute mvn clean e em seguida mvn mn:run
+  Em um terminal execute mvn clean
+  Em seguida mvn mn:run
 
-A API estará disponível em: http://localhost:8080
+3. A API estará disponível em: http://localhost:8080
 
-Para teste, e como recomendação para criação do projeto,
-utilize o Swagger em: http://localhost:8080/swagger-ui#/
+  Para teste, e como recomendação para criação do projeto,
+  utilize o Swagger em: http://localhost:8080/swagger-ui#/
 ```
 Agradecimentos ao professor Nadadelete, que nos instruiu para a criação do projeto.
